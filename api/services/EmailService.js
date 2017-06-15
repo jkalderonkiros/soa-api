@@ -4,7 +4,7 @@
 
 var sg = require('sendgrid')(sails.config.email.sendgrid.api_key);
 var helper = require('sendgrid').mail;
-var from_email = new helper.Email('otto@ottoman.com'); //sails.config.email.sendgrid.from
+var from_email = new helper.Email('hello@devstudio506.com'); //sails.config.email.sendgrid.from
 
 
 module.exports = {
@@ -31,6 +31,3 @@ module.exports = {
 
   }
 };
-
-
-

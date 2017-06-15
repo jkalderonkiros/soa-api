@@ -1,6 +1,6 @@
 # SoA api
 
-API for the [soa project](https://github.com/)
+API for the [soa project](https://github.com/jkalderonkiros/soa-admin)
 
 ###Installation and Running
 

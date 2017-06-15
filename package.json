@@ -1,5 +1,5 @@
 {
-  "name": "ottoman",
+  "name": "soa-api",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -34,15 +34,10 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js",
+    "start": "sails lift",
     "test": "./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/raphaeljlps/ottoman.git"
-  },
-  "author": "raphaeljlps",
   "license": "",
   "devDependencies": {
     "mocha": "^3.2.0",
