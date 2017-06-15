@@ -1,0 +1,111 @@
+{
+  "data": {
+    "entity": [
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:17.993Z",
+        "updatedAt": "2017-06-15T02:50:17.993Z",
+        "id": 1
+      },
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:19.414Z",
+        "updatedAt": "2017-06-15T02:50:19.414Z",
+        "id": 2
+      },
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:20.010Z",
+        "updatedAt": "2017-06-15T02:50:20.010Z",
+        "id": 3
+      },
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:20.190Z",
+        "updatedAt": "2017-06-15T02:50:20.190Z",
+        "id": 4
+      },
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:20.351Z",
+        "updatedAt": "2017-06-15T02:50:20.351Z",
+        "id": 5
+      },
+      {
+        "name": "ttt@ttt.com",
+        "createdAt": "2017-06-15T02:50:20.527Z",
+        "updatedAt": "2017-06-15T02:50:20.527Z",
+        "id": 6
+      }
+    ],
+    "user": [
+      {
+        "email": "raphael@gmail.com",
+        "password": "123123123",
+        "confirmPassword": "123123123",
+        "createdAt": "2017-06-15T02:46:25.620Z",
+        "updatedAt": "2017-06-15T02:46:25.620Z",
+        "id": 1
+      },
+      {
+        "email": "ttt@ttt.com",
+        "password": "123123123",
+        "confirmPassword": "123123123",
+        "createdAt": "2017-06-15T02:46:54.352Z",
+        "updatedAt": "2017-06-15T02:46:54.352Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "entity": {
+      "name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "oauth_access_token": {
+        "type": "string"
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 2
+    },
+    "entity": {
+      "id": 6
+    }
+  }
+}

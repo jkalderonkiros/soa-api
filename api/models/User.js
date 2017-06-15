@@ -38,26 +38,25 @@ module.exports = {
 
 
   //Encrypt the password before create the user record.
-  beforeCreate : function (values, next) {
-    bcrypt.hash(values.password, saltRounds, function (err, hash) {
-      if (err) return next(err);
-      values.encryptedPassword = hash;
-      next();
-    });
-  },
+//  beforeCreate : function (values, next) {
+//    bcrypt.hash(values.password, saltRounds, function (err, hash) {
+//      if (err) return next(err);
+//      values.encryptedPassword = hash;
+//      next();
+//    });
+//  },
 
   //Compare method
-  comparePassword : function (password, user, cb) {
-    bcrypt.compare(password, user.encryptedPassword, function (err, match) {
-
-      if(err) cb(err);
-      if(match) {
-        cb(null, true);
-      } else {
-        cb(err);
-      }
-    })
-  }
+//  comparePassword : function (password, user, cb) {
+//    bcrypt.compare(password, user.encryptedPassword, function (err, match) {
+//
+//      if(err) cb(err);
+//      if(match) {
+//        cb(null, true);
+//      } else {
+//        cb(err);
+//      }
+//    })
+//  }
 
 };
-
