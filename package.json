@@ -29,6 +29,7 @@
     "rc": "1.0.1",
     "sails": "~0.12.11",
     "sails-disk": "~0.10.9",
+    "sails-hook-jobs": "^0.1.6",
     "sails-mongo": "^0.12.2",
     "sendgrid": "^4.7.1"
   },
