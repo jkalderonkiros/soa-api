@@ -38,6 +38,30 @@
         "id": 6
       }
     ],
+    "event": [
+      {
+        "content": "test",
+        "type": "590d684562917205ff646d28",
+        "status": "pending",
+        "createdAt": "2017-06-30T05:16:48.230Z",
+        "updatedAt": "2017-06-30T05:16:48.230Z",
+        "id": 1
+      },
+      {
+        "content": "test",
+        "type": "590d684562917205ff646d28",
+        "status": "pending",
+        "createdAt": "2017-06-30T05:16:49.736Z",
+        "updatedAt": "2017-06-30T05:16:49.736Z",
+        "id": 2
+      }
+    ],
+    "log": [],
+    "role": [],
+    "route": [],
+    "routexstop": [],
+    "stop": [],
+    "type": [],
     "user": [
       {
         "email": "raphael@gmail.com",
@@ -55,10 +79,213 @@
         "updatedAt": "2017-06-15T02:46:54.352Z",
         "id": 2
       }
-    ]
+    ],
+    "venue": []
   },
   "schema": {
     "entity": {
+      "name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "event": {
+      "content": {
+        "type": "string"
+      },
+      "type": {
+        "type": "integer",
+        "model": "type",
+        "foreignKey": true,
+        "alias": "type"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "approved",
+          "denied"
+        ],
+        "defaultsTo": "pending"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "log": {
+      "content": {
+        "type": "string"
+      },
+      "type": {
+        "type": "integer",
+        "model": "type",
+        "foreignKey": true,
+        "alias": "type"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "processed",
+          "denied"
+        ],
+        "defaultsTo": "pending"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "role": {
+      "name": {
+        "type": "string",
+        "unique": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "route": {
+      "name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "integer",
+        "model": "type",
+        "foreignKey": true,
+        "alias": "type"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "disable",
+          "enable",
+          "canceled"
+        ],
+        "defaultsTo": "disable"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "routexstop": {
+      "route": {
+        "type": "integer",
+        "model": "route",
+        "foreignKey": true,
+        "alias": "route"
+      },
+      "stop": {
+        "type": "integer",
+        "model": "stop",
+        "foreignKey": true,
+        "alias": "stop"
+      },
+      "arrival": {
+        "type": "date"
+      },
+      "order": {
+        "type": "integer"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "disable",
+          "enable",
+          "canceled"
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "stop": {
+      "name": {
+        "type": "string"
+      },
+      "type": {
+        "type": "integer",
+        "model": "type",
+        "foreignKey": true,
+        "alias": "type"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "disable",
+          "enable",
+          "canceled"
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "type": {
       "name": {
         "type": "string"
       },
@@ -98,6 +325,30 @@
       "updatedAt": {
         "type": "datetime"
       }
+    },
+    "venue": {
+      "coordinates": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "disable",
+          "enable"
+        ]
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
     }
   },
   "counters": {
@@ -106,6 +357,16 @@
     },
     "entity": {
       "id": 6
-    }
+    },
+    "event": {
+      "id": 2
+    },
+    "log": {},
+    "role": {},
+    "route": {},
+    "routexstop": {},
+    "stop": {},
+    "type": {},
+    "venue": {}
   }
 }

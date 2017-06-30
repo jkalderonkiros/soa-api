@@ -1,6 +1,3 @@
-/**
- * Created by raphaeljlps on 28/02/17.
- */
 
 var sg = require('sendgrid')(sails.config.email.sendgrid.api_key);
 var helper = require('sendgrid').mail;
