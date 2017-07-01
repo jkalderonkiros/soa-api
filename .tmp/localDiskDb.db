@@ -61,7 +61,20 @@
     "route": [],
     "routexstop": [],
     "stop": [],
-    "type": [],
+    "type": [
+      {
+        "name": "test",
+        "createdAt": "2017-07-01T03:14:24.477Z",
+        "updatedAt": "2017-07-01T03:14:24.477Z",
+        "id": 1
+      },
+      {
+        "name": "xxxxx",
+        "createdAt": "2017-07-01T03:14:44.365Z",
+        "updatedAt": "2017-07-01T03:14:44.365Z",
+        "id": 2
+      }
+    ],
     "user": [
       {
         "email": "raphael@gmail.com",
@@ -366,7 +379,9 @@
     "route": {},
     "routexstop": {},
     "stop": {},
-    "type": {},
+    "type": {
+      "id": 2
+    },
     "venue": {}
   }
 }
