@@ -1,18 +1,7 @@
-# SoA api
+# soa
 
-API for the [soa project](https://github.com/jkalderonkiros/soa-admin)
-
-###Installation and Running
-
-You should just type ``npm install`` on the project's root folder.
-
-To run the project just type ``node app.js`` on the project's root folder after installing all the deps.
-
-###Testing
-
-To run the tests locally you just need to type ``npm test``.
+a [Sails](http://sailsjs.org) application
 
 
-###Deployment
-
-The latest code from master is automatically deployed after all tests pass.
+- mongod
+- sails lift

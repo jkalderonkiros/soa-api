@@ -18,19 +18,19 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'mongolabDb'
+    connection: 'prodSoaMongolabDb'
   },
 
   session: {
     adapter: 'mongo',
     url: process.env.MONGODB_URI
-  },
+  }
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
    ***************************************************************************/
 
-  port: process.env.PORT || 1337,
+  // port: 80,
 
   /***************************************************************************
    * Set the log level in production environment to "silent"                 *

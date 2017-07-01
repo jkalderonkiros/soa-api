@@ -17,8 +17,14 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  // models: {
-  //   connection: 'someMongodbServer'
-  // }
+  models: {
+   connection: 'devSoaMongolabDb'
+  },
+
+  session: {
+   adapter: 'mongo',
+   //url: "mongodb://127.0.0.1:27017"
+   url: process.env.MONGODB_URI
+  }
 
 };
